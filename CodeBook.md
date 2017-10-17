@@ -22,16 +22,16 @@ Each row contains, for a given subject and activity, 79 signal measurements. The
       o	WALKING_DOWNSTAIRS: the subject was walking downstairs
       o	SITTING: the subject was sitting
       o	STANDING: the subject was standing
-      o	LYING: the subject was lying down
+      o	LAYING: the subject was lying down
 
 ## Average and Standard Deviation of Measurements
 - Acceleration measurements (variables containing Accelerometer) were made in g's (9.81 m.s⁻²)
 - Gyroscope measurements (variables containing Gyroscope) were made in radians per second (rad.s⁻¹).
 Features were normalized and bounded within [-1,1].
 
-The measurements are classified in two domains: 
-  1.	Time-domain signals (variables prefixed by timeDomain), resulting from the capture of accelerometer and gyroscope raw signals.
-  2.	Frequency-domain signals (variables prefixed by frequencyDomain), resulting from the application of a Fast Fourier Transform            (FFT) to some of the time-domain signals.
+The measurements are classified in two Domains: 
+  1.	Time-domain signals (variables prefixed by TimeDomain), resulting from the capture of accelerometer and gyroscope raw signals.
+  2.	Frequency-domain signals (variables prefixed by FrequencyDomain), resulting from the application of a Fast Fourier Transform            (FFT) to some of the time-domain signals.
 
 ### Time-domain signals
 
@@ -45,12 +45,13 @@ The following transformations were applied to the source data:
 - activity identifying numbers were replaced with descriptive names (listed in "Identifiers" in VARIABLES section)
 - variable names were replaced with more descriptive names by expanding abbreviations and removing special characters. The list of 
   abbreviations expanded are as follows: 
+    f changed to "FrequencyDomain",
+    t changed to "TimeDomain",
+    mean changed to "Mean", 
+    std changed to "StandardDeviation",
     Acc changed to "Accelerometer",
     Gryo changed to "Gyroscope",
     Mag changed to "Magnitude",
-    Freq changed to "Frequency",
-    std changed to "StandardDeviation",
-    f changed to "frequencyDomain",
-    t changed to "timeDomain"
+    Freq changed to "Frequency"
 - a final data set (TidyData.txt), containing the average of each variable for each activity and each subject, was created.
 
