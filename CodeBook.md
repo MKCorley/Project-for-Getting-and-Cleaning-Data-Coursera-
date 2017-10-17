@@ -45,12 +45,12 @@ The following transformations were applied to the source data:
 - activity identifying numbers were replaced with descriptive names (listed in "Identifiers" in VARIABLES section)
 - variable names were replaced with more descriptive names by expanding abbreviations and removing special characters. The list of 
   abbreviations expanded are as follows: 
-    Acc changed to "Accelerometer"
-    Gryo changed to "Gyroscope"
-    Mag changed to "Magnitude"
-    Freq changed to "Frequency"
-    std changed to "StandardDeviation"
-    f changed to "frequencyDomain"
+    Acc changed to "Accelerometer",
+    Gryo changed to "Gyroscope",
+    Mag changed to "Magnitude",
+    Freq changed to "Frequency",
+    std changed to "StandardDeviation",
+    f changed to "frequencyDomain",
     t changed to "timeDomain"
 - a final data set (TidyData.txt), containing the average of each variable for each activity and each subject, was created.
 
