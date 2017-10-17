@@ -17,12 +17,12 @@ Each row contains, for a given subject and activity, 79 signal measurements. The
 ## Identifiers
     Subject - subject identifier. Integer, ranging from 1 to 30.
     Activity - activity identifier. String with 6 possible values:
-      o	WALKING: subject was walking
-      o	WALKING_UPSTAIRS: subject was walking upstairs
-      o	WALKING_DOWNSTAIRS: subject was walking downstairs
-      o	SITTING: subject was sitting
-      o	STANDING: subject was standing
-      o	LAYING: subject was laying
+      o	WALKING: the subject was walking
+      o	WALKING_UPSTAIRS: the subject was walking upstairs
+      o	WALKING_DOWNSTAIRS: the subject was walking downstairs
+      o	SITTING: the subject was sitting
+      o	STANDING: the subject was standing
+      o	LYING: the subject was lying down
 
 ## Average and Standard Deviation of Measurements
 - Acceleration measurements (variables containing Accelerometer) were made in g's (9.81 m.s⁻²)
@@ -31,7 +31,7 @@ Features were normalized and bounded within [-1,1].
 
 The measurements are classified in two domains: 
   1.	Time-domain signals (variables prefixed by timeDomain), resulting from the capture of accelerometer and gyroscope raw signals.
-  2.	Frequency-domain signals (variables prefixed by frequencyDomain), resulting from the application of a Fast Fourier Transform (FFT)       to some of the time-domain signals.
+  2.	Frequency-domain signals (variables prefixed by frequencyDomain), resulting from the application of a Fast Fourier Transform            (FFT) to some of the time-domain signals.
 
 ### Time-domain signals
 
@@ -39,3 +39,18 @@ The measurements are classified in two domains:
 
 
 # TRANSFORMATIONS
+The following transformations were applied to the source data:
+- training and test data sets were merged.
+- measurements of the means and standard deviations were extracted, and other columns were discarded.
+- activity identifying numbers were replaced with descriptive names (listed in "Identifiers" in VARIABLES section)
+- variable names were replaced with more descriptive names by expanding abbreviations and removing special characters. The list of 
+  abbreviations expanded are as follows: 
+    Acc changed to "Accelerometer"
+    Gryo changed to "Gyroscope"
+    Mag changed to "Magnitude"
+    Freq changed to "Frequency"
+    std changed to "StandardDeviation"
+    f changed to "frequencyDomain"
+    t changed to "timeDomain"
+- a final data set (TidyData.txt), containing the average of each variable for each activity and each subject, was created.
+
