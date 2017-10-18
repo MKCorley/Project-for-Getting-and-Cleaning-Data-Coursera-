@@ -73,12 +73,12 @@ DatasetColumnNames <- gsub("BodyBody", "Body", DatasetColumnNames)
 #Expand abbreviations in column names
 DatasetColumnNames <- gsub("mean", "Mean", DatasetColumnNames)
 DatasetColumnNames <- gsub("std", "StandardDeviation", DatasetColumnNames)
-DatasetColumnNames <- gsub("^f", "FrequencyDomain", DatasetColumnNames)
-DatasetColumnNames <- gsub("^t", "TimeDomain", DatasetColumnNames)
 DatasetColumnNames <- gsub("Acc", "Accelerometer", DatasetColumnNames)
 DatasetColumnNames <- gsub("Gyro", "Gyroscope", DatasetColumnNames)
 DatasetColumnNames <- gsub("Mag", "Magnitude", DatasetColumnNames)
 DatasetColumnNames <- gsub("Freq", "Frequency", DatasetColumnNames)
+DatasetColumnNames <- gsub("^f", "FrequencyDomain", DatasetColumnNames)
+DatasetColumnNames <- gsub("^t", "TimeDomain", DatasetColumnNames)
 
 #Use the DatasetColumnNames as column names in Dataset
 colnames(Dataset) <- DatasetColumnNames
