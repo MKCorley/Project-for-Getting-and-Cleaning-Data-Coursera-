@@ -19,13 +19,13 @@ b. The CodeBook.md file describes the contents of the data set. It indicates the
 
 
 c. The scripts in the file run_analysis.R do the following:
-  1. Downloads the dataset, if it does not already exist in the working directory.
+  1. Downloads the dataset, if it does not already exist in the working directory and reads the files into R.
   2. Merges the training and the test sets to create one data set.
   3. Extracts only the measurements on the mean and standard deviation for each measurement.
   4. Uses descriptive activity names to name the activities in the data set.
   5. Appropriately labels the data set with descriptive variable names.
   6. From the data set in the previous step, creates an independent tidy data set with the average of each variable for each activity and        each subject.
-  This script requires the dplyr package and was run in R version 3.2.2.
+  This script requires the dplyr package and was run in R version 3.4.1 (2017-06-30).
   
   
-  d. The script results in the tidy data set file: TidyData.txt
+  d. The script in run_analysis.R results in the tidy data set file: TidyData.txt
